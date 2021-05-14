@@ -10,3 +10,4 @@ out
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/
+/META-INF/
