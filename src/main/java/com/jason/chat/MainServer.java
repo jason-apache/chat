@@ -32,7 +32,7 @@ public class MainServer implements Runnable {
             selector = Selector.open();
             ServerSocketChannel server = ServerSocketChannel.open();
             ResourceBundle resourceBundle = ResourceBundle.getBundle("config");
-            server.socket().bind(new InetSocketAddress(Integer.parseInt(resourceBundle.getString("port"))));
+            server.socket().bind(new InetSocketAddress(Integer.parseInt(resourceBundle.getString("server.port"))));
             server.configureBlocking(false);
             serverKey = server.register(selector, SelectionKey.OP_ACCEPT);
             Printer.print("服务器已启动...");
